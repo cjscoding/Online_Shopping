@@ -1,0 +1,107 @@
+:root{
+    /*color*/
+    --color-purple: rgb(104, 62, 143);
+    --color-white: rgb(247, 244, 232);
+    --color-blue: rgb(57, 112, 185);
+    --color-yellow: rgb(252, 182, 77);
+    --color-pink: rgb(231, 113, 143);
+
+    /* size */
+    --size-btn: 60px;
+    --size-border:4px;
+    --size-font:16px;
+    --size-font-weight: 600;
+
+    /* animation */
+    --animation-duration: 300ms;
+}
+
+body{
+    background-color: var(--color-purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    height: 100vh;
+}
+
+.logo{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease;
+}
+
+.logo:hover,
+.btn:hover{
+    transform:scale(1.1);
+}
+
+.btns{
+    width: 60%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-size: var(--size-font);
+    border: none;
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease;
+}
+
+.imgBtn{
+    width: var(--size-btn);
+    height: var(--size-btn);
+}
+
+.colorBtn{
+    width: 65px;
+    height: 45px;
+    margin-right: 7px;
+    color: var(--color-white);
+    border-radius: var(--size-border);
+    font-weight: var(--size-font-weight);
+}
+
+.colorBtn.blue{
+    background-color: var(--color-blue);
+}
+.colorBtn.yellow{
+    background-color: var(--color-yellow);
+}
+.colorBtn.pink{
+    background-color: var(--color-pink);
+}
+
+.items{
+    width: 60%;
+    height: 60%;
+    padding: 0;
+    margin-top: 30px;
+    overflow-y: scroll;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: var(--size-font);
+    background-color: var(--color-white);
+    font-weight: var(--size-font-weight);
+    border-radius: var(--size-border);
+}
+
+.item>img{
+    padding: 5px 15px;
+    width: var(--size-btn);
+    height: var(--size-btn);
+}
